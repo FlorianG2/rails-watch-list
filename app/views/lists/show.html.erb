@@ -1,0 +1,8 @@
+<h2><%= @list.name %></h2>
+<h3><%= link_to "add a movie to the list", new_list_bookmark_path(@list) %></h3>
+<% @bookmarks = Bookmark.where(list: @list) %>
+<% @bookmarks.each do |bookmark| %>
+<%= (bookmark.movie).title %>
+<%= link_to "delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+<% end %>
+<%= link_to "delete list", list_path(@list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>

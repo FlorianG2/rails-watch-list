@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+.banner {
+  background-image: url(https://lecoindescritiquescine.com/wp-content/uploads/2016/06/mosac3afque-films.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 50px;
+  font-weight: bolder;
+}

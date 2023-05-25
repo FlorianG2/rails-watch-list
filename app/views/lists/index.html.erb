@@ -1,0 +1,12 @@
+<div class="container-my-lists">
+  <h2>MY LISTS</h2>
+  <div class="card-lists">
+    <% @lists.each do |list| %>
+        <%= link_to list_path(list), class:"btn-list" do %>
+        <div class="card-list">
+          <%= list.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
